@@ -30,6 +30,7 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
 
 - [Open-Source GitHub Projects](#open-source-github-projects)
@@ -40,69 +41,24 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 
 
+## Sector Overview & Market Dynamics
+
+The global Identity and Access Management (IAM) and authentication market is estimated at approximately **$23B–$27B in 2025–2026** (projected to exceed $50B by the early 2030s at an ~11–13% CAGR). The market structure is **moderately concentrated at the top**—anchored by dominant enterprise cloud oligopolies (Microsoft, Cisco, Okta, and Ping/ForgeRock)—yet remains **highly fragmented across specialized niches** such as phishing-resistant passwordless MFA, hardware tokens, zero-trust device posture, and customer IAM (CIAM).
+
 ## SaaS/Hosted Platforms
 
-
-
-- **[Duo Security (Cisco)](https://duo.com/)**  
-
-  **The most widely adopted MFA platform** with push notifications, TOTP, WebAuthn, and SMS verification. Features **adaptive authentication**, **device trust**, and **zero-trust access policies**. **Integrated with Authelia** as a mobile push provider .
-
-
-
-- **[Okta Verify](https://www.okta.com/)**  
-
-  **Enterprise identity cloud** with SSO, MFA, lifecycle management, and API access management. Features **Universal Directory**, **Adaptive MFA**, and **Identity Governance**. **The enterprise standard** for workforce and customer identity.
-
-
-
-- **[Microsoft Entra ID](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id)**  
-
-  **Microsoft's cloud identity platform** (formerly Azure AD) with SSO, Conditional Access, and passwordless authentication. Features **Entra Verified ID** for decentralized identity and **Entra Permissions Management** for CIEM.
-
-
-
-- **[Ping Identity](https://www.pingidentity.com/)**  
-
-  **Enterprise IAM platform** with SSO, MFA, API security, and identity governance. **Merged with ForgeRock** to combine AI-driven IAM with fraud and risk protection . **PingOne for Workforce** starts at $3/user/month for 5,000+ users .
-
-
-
-- **[RSA SecurID](https://www.rsa.com/)**  
-
-  **The original hardware token MFA**—now a comprehensive access management platform with **risk-based authentication**, **identity governance**, and **zero-trust capabilities**.
-
-
-
-- **[Silverfort](https://www.silverfort.com/)**  
-
-  **Unified identity protection platform** that extends MFA to any resource—including legacy systems, OT networks, and command-line interfaces—without agents or proxies.
-
-
-
-- **[Beyond Identity](https://www.beyondidentity.com/)**  
-
-  **Passwordless authentication** with **device-bound credentials** and **continuous risk assessment**. Eliminates passwords entirely while providing phishing-resistant MFA.
-
-
-
-- **[HYPR](https://www.hypr.com/)**  
-
-  **Passwordless authentication** with **FIDO2/WebAuthn** and **decentralized identity**. Features **HYPR Affirm** for identity verification and **HYPR Adapt** for risk-based authentication.
-
-
-
-- **[Trusona](https://trusona.com/)**  
-
-  **Passwordless authentication** using **mobile device biometrics** and **identity proofing**. Features **Trusona Authentication Cloud** for consumer-facing applications.
-
-
-
-- **[Yubico Cloud (YubiKey as a Service)](https://www.yubico.com/)**  
-
-  **Hardware security keys** with **FIDO2/WebAuthn** and **PIV** support. **YubiKey as a Service** expands to **199 delivery locations** (175 countries and 24 territories) with **self-service ordering** for employees in the US, Canada, and Europe . **The gold standard** for phishing-resistant hardware MFA.
-
-
+| Platform | Estimated Size (Valuation / Revenue) | Starting Pricing (Paid Tiers) | Free Tier / Trial Limit | Key Focus & Features |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Microsoft Entra ID](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id)** | **~$4.0T Market Cap** (~$332B annual revenue) | **$6.00/user/month** (Entra ID P1); $9.00/user/month (P2); $12.00/user/month (Entra Suite) | **Free tier available**: up to 50,000 objects (scale to 300k with custom domain), cloud-only SSO, basic MFA defaults, self-service password change (no SLA or Conditional Access) | Cloud identity standard with SSO, Conditional Access, Entra Verified ID, and CIEM permissions management. |
+| **[Duo Security (Cisco)](https://duo.com/)** | **~$450B Market Cap** (~$63B annual revenue for Cisco) | **$3.00/user/month** (Duo Essentials); $6.00/user/month (Advantage); $9.00/user/month (Premier) | **Free tier available**: up to 10 users with basic MFA, Duo Mobile app support, and unlimited administrators (excludes SSO and risk-based policies) | Widely adopted MFA platform with push notifications, TOTP, WebAuthn, device trust, adaptive authentication, and Authelia integration. |
+| **[Okta](https://www.okta.com/)** | **~$24B Market Cap** (~$2.9B annual revenue) | **$6.00/user/month** (Workforce Starter; billed annually, ~$1,500/yr minimum); $14–$17+/user/month (Essentials) | **30-day free trial**: capped at 10 active users, 1 admin email, 5 Okta Workflows, and demo environment (no production SLA) | Enterprise identity cloud with SSO, Universal Directory, Adaptive MFA, Lifecycle Management, and API access management. |
+| **[Ping Identity](https://www.pingidentity.com/)** | **$2.8B Acquisition Valuation** (~$800M ARR combined with ForgeRock) | **$3.00/user/month** (Workforce Essential; 5,000-user minimum commitment, ~$180k/yr floor); $6.00/user/month (Plus) | **30-day free trial**: evaluation environment access capped at 5 trial environments per org and up to 1M identities per environment | Enterprise IAM platform merged with ForgeRock; provides SSO, MFA, orchestration, API security, and AI-driven fraud/risk protection. |
+| **[RSA SecurID](https://www.rsa.com/)** | **$2.1B Acquisition Valuation** (~$300M annual revenue) | **$3.00–$5.00/user/month** (ID Plus C1 Cloud); $6.00/user/month (ID Plus M1); $7.00/user/month (ID Plus E2 Hybrid) | **45-day free trial**: full ID Plus evaluation for cloud/hybrid deployments, subject to sales-managed proof-of-concept user onboarding limits | Pioneer in hardware and software MFA tokens, now providing ID Plus access management, risk-based authentication, and zero-trust security. |
+| **[Beyond Identity](https://www.beyondidentity.com/)** | **$1.1B Valuation** (Series C unicorn; ~$38M ARR) | **$6.00/user/month** (Workforce Zero Trust); CIAM starting at **$0.01/MAU/month** | **Free tier available**: core passwordless MFA for unlimited users without time expiration; enterprise advanced device trust requires a paid tier | Completely passwordless authentication with device-bound credentials, continuous risk posture checks, and phishing-resistant MFA. |
+| **[Silverfort](https://www.silverfort.com/)** | **$1.0B Valuation** (Series D unicorn) | **~£5.00–£40.00/user/month** via G-Cloud framework tiers (Core/Plus/Advanced/Enterprise; typical custom contract base) | **14-day evaluation / PoC**: sales-guided enterprise proof-of-concept and identity security posture risk assessment (no self-serve free plan) | Agentless/proxyless unified identity protection extending MFA and ITDR across legacy systems, Active Directory, CLI, and OT networks. |
+| **[Yubico (YubiKey as a Service)](https://www.yubico.com/)** | **~$1.0B Market Cap** (~$200M annual revenue, Nasdaq Stockholm: YUBICO) | **~$3.00–$4.00/user/month** (YubiEnterprise Subscription; Base/Advanced/Compliance tiers, 500-user minimum) | **No free tier**: physical hardware security keys subscription; offers sales-managed enterprise pilots with up to 25% annual replacement allowance | Hardware security keys with FIDO2/WebAuthn and PIV; YubiKey as a Service provides automated global key logistics and replacement pools across 190+ countries. |
+| **[HYPR](https://www.hypr.com/)** | **~$200M Valuation** ($120M+ total venture funding raised) | **$3.00/user/month** (Identity Assurance Access); $6.00/user/month (Plus); $9.00/user/month (Advanced) | **30-day free trial**: evaluation pilot capped at up to 50 users for web and workstation passwordless access | True passwordless MFA platform utilizing FIDO2/WebAuthn, mobile biometrics, and desktop login verification. |
+| **[Trusona](https://trusona.com/)** | **~$80M Valuation** ($38M total funding raised) | **Custom quote-based** (starting enterprise packages scale by Monthly Active Users / volume) | **Free tier available**: 100% free passwordless MFA plugin for WordPress; enterprise cloud offers sales-guided evaluation pilots (no time-limited self-serve trial) | Passwordless authentication leveraging mobile biometrics, dynamic identity proofing, and anti-ATO (account takeover) protection. |
 
 ## Open-Source GitHub Projects
 
