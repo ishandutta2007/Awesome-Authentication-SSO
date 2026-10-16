@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0e172a" />
+      <stop offset="100%" stop-color="#050814" />
+    </linearGradient>
+
+    <!-- Vibrant Gradient Accent -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.4" />
+    </pattern>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .title {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 54px;
+        letter-spacing: -0.5px;
+      }
+      .subtitle {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        font-size: 21px;
+        fill: #94a3b8;
+      }
+      .badge-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        fill: #e2e8f0;
+      }
+
+      /* Dynamic background animations */
+      @keyframes floatOrb1 {
+        0%, 100% { transform: translate(0px, 0px) scale(1); }
+        50% { transform: translate(40px, -25px) scale(1.1); }
+      }
+      @keyframes floatOrb2 {
+        0%, 100% { transform: translate(0px, 0px) scale(1); }
+        50% { transform: translate(-35px, 30px) scale(0.95); }
+      }
+      @keyframes pulseRing {
+        0% { r: 18; opacity: 0.8; stroke-width: 1.5; }
+        50% { r: 32; opacity: 0.2; stroke-width: 3; }
+        100% { r: 18; opacity: 0.8; stroke-width: 1.5; }
+      }
+      @keyframes flowLine {
+        0% { stroke-dashoffset: 240; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes rotateRings {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .orb-1 { animation: floatOrb1 10s ease-in-out infinite; transform-origin: center; }
+      .orb-2 { animation: floatOrb2 12s ease-in-out infinite; transform-origin: center; }
+      .pulsing-ring { animation: pulseRing 3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+      .flowing-dash { stroke-dasharray: 10, 15; animation: flowLine 14s linear infinite; }
+      .rotating-group { animation: rotateRings 25s linear infinite; transform-origin: 1060px 180px; }
+    </style>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+  <rect width="1200" height="360" rx="16" fill="url(#grid)" />
+
+  <!-- Dynamic ambient lights in background (kept away from title/subtitle foreground) -->
+  <g class="orb-1">
+    <circle cx="150" cy="80" r="140" fill="#3b82f6" opacity="0.18" filter="url(#glow)" />
+  </g>
+  <g class="orb-2">
+    <circle cx="1080" cy="220" r="160" fill="#8b5cf6" opacity="0.18" filter="url(#glow)" />
+  </g>
+  <circle cx="650" cy="300" r="110" fill="#ec4899" opacity="0.1" filter="url(#glow)" />
+
+  <!-- Animated flow lines in background -->
+  <path d="M 0 100 Q 300 20 600 120 T 1200 80" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.25" class="flowing-dash" />
+  <path d="M 0 280 Q 400 350 800 240 T 1200 300" fill="none" stroke="#a855f7" stroke-width="1.5" opacity="0.2" class="flowing-dash" style="animation-direction: reverse;" />
+
+  <!-- Interactive Graphic / Right Side Tech Lock Emblem -->
+  <g class="rotating-group">
+    <circle cx="1060" cy="180" r="90" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6, 12" />
+    <circle cx="1060" cy="180" r="120" fill="none" stroke="#1e293b" stroke-width="1" stroke-dasharray="8, 16" />
+    <circle cx="1060" cy="90" r="5" fill="#60a5fa" opacity="0.8" />
+    <circle cx="1150" cy="240" r="6" fill="#a855f7" opacity="0.8" />
+    <circle cx="970" cy="210" r="4.5" fill="#38bdf8" opacity="0.8" />
+  </g>
+
+  <!-- Glowing Center Shield on Right (Clean & Elevated) -->
+  <g transform="translate(1015, 135)">
+    <circle class="pulsing-ring" cx="45" cy="45" r="28" fill="none" stroke="#60a5fa" />
+    <rect x="15" y="15" width="60" height="60" rx="14" fill="url(#shieldGrad)" filter="url(#glow)" opacity="0.9" />
+    <!-- Lock / Keyhole Icon in Shield -->
+    <path d="M 45 34 C 40 34 36 38 36 43 L 36 47 C 34 47 33 48.5 33 50.5 L 33 60.5 C 33 62.5 34 64 36 64 L 54 64 C 56 64 57 62.5 57 60.5 L 57 50.5 C 57 48.5 56 47 54 47 L 54 43 C 54 38 50 34 45 34 Z M 45 38 C 47.8 38 50 40.2 50 43 L 50 47 L 40 47 L 40 43 C 40 40.2 42.2 38 45 38 Z" fill="#ffffff" />
+  </g>
+
+  <!-- Foreground Content: Unobstructed Title & Details -->
+  <!-- Left accent marker -->
+  <rect x="70" y="70" width="6" height="70" rx="3" fill="url(#textGrad)" />
+
+  <!-- Main Title -->
+  <text x="90" y="112" class="title" fill="#f8fafc">
+    Awesome <tspan fill="url(#textGrad)">Authentication &amp; SSO</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="90" y="156" class="subtitle">
+    The Curated Hub for Identity, OIDC / SAML Federation, Passkeys &amp; Zero-Trust Access
+  </text>
+
+  <!-- Category Pills / Feature Highlights in Foreground -->
+  <g transform="translate(90, 205)">
+    <!-- Pill 1: OIDC & SAML -->
+    <g transform="translate(0, 0)">
+      <rect width="138" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <circle cx="18" cy="17" r="4.5" fill="#38bdf8" />
+      <text x="32" y="22" class="badge-text">OIDC &amp; SAML 2.0</text>
+    </g>
+
+    <!-- Pill 2: FIDO2 & WebAuthn -->
+    <g transform="translate(150, 0)">
+      <rect width="168" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <circle cx="18" cy="17" r="4.5" fill="#a855f7" />
+      <text x="32" y="22" class="badge-text">Passkeys &amp; WebAuthn</text>
+    </g>
+
+    <!-- Pill 3: Reverse Proxies -->
+    <g transform="translate(330, 0)">
+      <rect width="166" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <circle cx="18" cy="17" r="4.5" fill="#34d399" />
+      <text x="32" y="22" class="badge-text">Forward Auth Proxies</text>
+    </g>
+
+    <!-- Pill 4: Zero Trust & MFA -->
+    <g transform="translate(508, 0)">
+      <rect width="160" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <circle cx="18" cy="17" r="4.5" fill="#ec4899" />
+      <text x="32" y="22" class="badge-text">Adaptive Zero Trust</text>
+    </g>
+  </g>
+
+  <!-- Bottom Meta Bar -->
+  <line x1="90" y1="275" x2="880" y2="275" stroke="#334155" stroke-width="1" stroke-opacity="0.5" />
+  <text x="90" y="306" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#64748b" font-weight="500">
+    ⚡ Enterprise Cloud SaaS Platforms &amp; Fully Self-Hosted Open-Source Identity Stacks
+  </text>
+</svg>
